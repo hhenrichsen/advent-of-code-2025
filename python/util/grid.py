@@ -357,11 +357,13 @@ class Grid(Generic[A]):
         """
         Transforms each item in a grid to something else.
         """
-        grid = Grid()
-        for y, row in enumerate(grid):
-            grid.__data.append([])
+        data = []
+        grid = Grid(data)
+        for y, row in enumerate(self.__data):
+            data.append([])
             for x, item in enumerate(row):
-                grid.__data[-1].append(Grid.GridItem(grid, map(item), x, y))
+                data[-1].append(Grid.GridItem(grid, map(item), x, y))
+        grid.__data = data
         return grid
 
     def flood(
