@@ -111,3 +111,9 @@ def chunks(l: List[str]) -> List[List[str]]:
             chunk.append(line)
     res.append(chunk)
     return res
+
+def rotate(l: List[List[A]]) -> List[List[A]]:
+    return list(zip(*l[::-1]))
+
+def rotate_ccw(l: List[List[A]]) -> List[List[A]]:
+    return list(zip(*l))[::-1]
