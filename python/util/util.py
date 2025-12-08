@@ -1,3 +1,4 @@
+from math import floor
 from typing import IO, Callable, Iterable, List, TypeVar
 from numbers import Number
 
@@ -117,3 +118,9 @@ def rotate(l: List[List[A]]) -> List[List[A]]:
 
 def rotate_ccw(l: List[List[A]]) -> List[List[A]]:
     return list(zip(*l))[::-1]
+
+def flatten(l: Iterable[Iterable[A]]) -> List[A]:
+    return [item for sublist in l for item in sublist]
+
+def pad(s: str, length: int, pad_char: str = " ") -> str:
+    return s.ljust(floor(length / 2), pad_char).rjust(floor(length / 2) + 1, pad_char)
