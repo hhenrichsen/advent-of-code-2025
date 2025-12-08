@@ -90,12 +90,14 @@ if not is_grid:
     test_inp = None
     with open("res/day{day}a.txt") as f:
         test_inp = list(map(lambda s: s.strip(), f.readlines()))
-    print(part1(test_inp))
-    print(part2(test_inp))
+    p1i = test_inp
+    print(part1(p1i))
+    p2i = test_inp
+    print(part2(p2i))
 else:
     test_inp = Grid.read("res/day{day}a.txt")
-    print(part1g(test_inp))
-    print(part2g(test_inp))
+    print(part1g(test_inp.clone()))
+    print(part2g(test_inp.clone()))
 print()
 
 print("FINAL DAY {day}:")
@@ -103,11 +105,13 @@ if not is_grid:
     inp = None
     with open("res/day{day}.txt") as f:
         inp = list(map(lambda s: s.strip(), f.readlines()))
-    print(part1(inp))
-    print(part2(inp))
+    p1i = inp
+    print(part1(p1i))
+    p2i = inp
+    print(part2(p2i))
 else:
     inp = Grid.read("res/day{day}.txt")
-    print(part1g(inp))
-    print(part2g(inp))
+    print(part1g(inp.clone()))
+    print(part2g(inp.clone()))
 """
     )
