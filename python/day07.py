@@ -1,42 +1,10 @@
-from collections import Counter, defaultdict, deque
-from functools import cache, lru_cache
-from math import log
-from typing import List, Tuple
-from itertools import combinations, permutations
+from collections import deque
+from functools import lru_cache
+from typing import List
 
 from util import (
-    AfterRegion,
     Grid,
-    pad,
-    InputParser,
-    Interval,
-    RangeRegion,
-    RestRegion,
-    UntilRegion,
-    breadth_first_search,
-    chunks,
-    compare_x,
-    compare_y,
-    compose_fns,
-    discard,
-    either,
-    eq,
-    intersect_strings,
-    ints,
-    inv,
-    is_in,
-    ne,
-    not_in,
-    re_whitespace_segmenter,
-    segmented_lines,
-    sort_lambda,
-    space_segmenter,
-    stripped_lines,
-    whitespace_numbers,
-    windows,
 )
-
-is_grid = True
 
 
 def part1g(inp: Grid):
@@ -64,12 +32,6 @@ def part1g(inp: Grid):
                 seen.add(e.position())
     return len(splitters)
 
-def part1(inp: List[str]):
-    result = 0
-    for line in inp:
-        ...
-    return result
-
 @lru_cache(maxsize=None)
 def p2_recursive(inp: Grid, point: Grid.GridItem[str]):
     if point.y == inp.size()[1] - 1:
@@ -92,33 +54,13 @@ def part2g(inp: Grid):
     return result
 
 
-def part2(inp: List[str]):
-    result = 0
-    for line in inp:
-        ...
-    return result
-
 print("TEST DAY 07:")
-if not is_grid:
-    test_inp = None
-    with open("res/day07a.txt") as f:
-        test_inp = list(map(lambda s: s.strip(), f.readlines()))
-    print(part1(test_inp))
-    print(part2(test_inp))
-else:
-    test_inp = Grid.read("res/day07a.txt")
-    print(part1g(test_inp.clone()))
-    print(part2g(test_inp.clone()))
+test_inp = Grid.read("res/day07a.txt")
+print(part1g(test_inp.clone()))
+print(part2g(test_inp.clone()))
 print()
 
 print("FINAL DAY 07:")
-if not is_grid:
-    inp = None
-    with open("res/day07.txt") as f:
-        inp = list(map(lambda s: s.strip(), f.readlines()))
-    print(part1(inp))
-    print(part2(inp))
-else:
-    inp = Grid.read("res/day07.txt")
-    print(part1g(inp.clone()))
-    print(part2g(inp.clone()))
+inp = Grid.read("res/day07.txt")
+print(part1g(inp.clone()))
+print(part2g(inp.clone()))
