@@ -7,8 +7,9 @@ name = "pypi"
 tqdm = "*"
 aoc-lube = "*"
 z3-solver = "*"
+shapely = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.10"
+python_version = "3.11"
