@@ -1,0 +1,66 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "lock-in",
+      "targetTime": 1.5759312124054015
+    },
+    {
+      "name": "text-in",
+      "targetTime": 7.5759312124054015
+    },
+    {
+      "name": "text-part-1-out",
+      "targetTime": 21.189638163280005
+    },
+    {
+      "name": "part-1-variables",
+      "targetTime": 23.189638163280005
+    },
+    {
+      "name": "part-1-loop",
+      "targetTime": 28.51479431481977
+    },
+    {
+      "name": "part-1-loop-variables",
+      "targetTime": 30.335082550456622
+    },
+    {
+      "name": "part-1-if",
+      "targetTime": 31.335082550456622
+    },
+    {
+      "name": "part-1-if-pointer",
+      "targetTime": 33.33508255045662
+    },
+    {
+      "name": "part-1-if-pointer-end",
+      "targetTime": 37.45365741723415
+    },
+    {
+      "name": "part-1-print",
+      "targetTime": 41.09423388850785
+    },
+    {
+      "name": "part-2",
+      "targetTime": 44.38649747018844
+    },
+    {
+      "name": "text-part-2-out",
+      "targetTime": 56.38649747018844
+    },
+    {
+      "name": "part-2-code-1",
+      "targetTime": 57.38649747018844
+    },
+    {
+      "name": "part-2-code-2",
+      "targetTime": 60.37306270998889
+    },
+    {
+      "name": "full-output",
+      "targetTime": 63.863560405905254
+    }
+  ],
+  "seed": 1502287862
+}
